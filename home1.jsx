@@ -41,7 +41,7 @@ class Home1 extends Component {
         s1.searches[input.name] = input.value
         this.setState(s1)
     }
-    async link(obj) {
+    link(obj) {
         this.setState({ loading: false })
         console.log(obj)
         let starttime = new Date().getTime()
