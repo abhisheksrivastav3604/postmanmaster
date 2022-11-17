@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import http from "./httpservice.js";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -28,16 +27,6 @@ class Home1 extends Component {
         header1: 0,
         loading: null
     };
-
-    async fetchData() {
-        let response = await http.get(`/history`)
-        let { data } = response
-        console.log(response)
-        this.setState({ histories: data })
-    }
-    componentDidMount() {
-        this.fetchData()
-    }
 
 
     handlechange = (e) => {
